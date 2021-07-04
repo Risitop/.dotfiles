@@ -91,7 +91,7 @@ myStartupHook = do
 -- Main
 main = do
   xmproc0 <- spawnPipe ("xmobar -x 0 " ++ myXMobarPath)
-  xmproc1 <- spawnPipe ("xmobar -x 1 " ++ myXMobarPath)
+  xmproc1 <- spawnPipe ("sleep 1; xmobar -x 1 " ++ myXMobarPath) -- sleeping for smoother update
   xmonad $ docks azertyConfig
     { terminal = myTerminal
     , modMask = myModMask
