@@ -13,8 +13,8 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = " %UnsafeStdinReader% }{ <fc=#f542d1>%nbupdates% pkg.</fc> | %disku% |\
-                \ <fc=#FFEE00>%cpu% %memory%</fc> | %dynnetwork% |\
+   , template = " %UnsafeStdinReader% }{ %dynnetwork% | <fc=#f542d1>%nbupdates% pkg.</fc> | %disku% |\
+                \ <fc=#FFEE00>%cpu% %memory%</fc> |\
                 \ %default:Master% | %LFPG% | %date% "
 
    -- general behavior
@@ -47,8 +47,8 @@ Config {
                              ] 36000
 
         -- network activity monitor (dynamic interface resolution)
-        , Run DynNetwork     [ "--template" , "<fc=#11FF73><fn=1>\xf0ab</fn> <tx>kB - \
-                                \<fn=1>\xf0aa</fn> <rx>kB (<dev>)</fc>"
+        , Run DynNetwork     [ "--template" , "<fc=#11FF73><fn=1>\xf0aa</fn> <tx>kB - \
+                                \<fn=1>\xf0ab</fn> <rx>kB (<dev>)</fc>"
                              ] 10
 
         -- cpu activity monitor
