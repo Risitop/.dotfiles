@@ -10,11 +10,13 @@ cp -rf ~/.dotfiles/.utils ~/.utils
 
 # Root dotfiles
 cp ~/.dotfiles/.Xresources ~/.Xresources
+xrdb ~/.Xresources
 cp ~/.dotfiles/.bashrc ~/.bashrc
 cp ~/.dotfiles/.gitconfig ~/.gitconfig
 
 # Emacs
 cp -rf ~/.dotfiles/.doom.d ~/.doom.d
+~/.emacs.d/bin/doom sync
 
 # XMonad
 cp -rf ~/.dotfiles/.xmonad ~/.xmonad
