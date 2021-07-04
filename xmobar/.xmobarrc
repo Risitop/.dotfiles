@@ -1,7 +1,7 @@
 Config { 
 
    -- appearance
-   font =         "xft:SauceCodePro Nerd Font:size=12:antialias=true"
+   font =         "xft:Open Sans:Bold:size=12:antialias=true"
    , additionalFonts = [ "xft:Font Awesome 5 Free Solid:size=12"
                         , "xft:Font Awesome 5 Brands:size=12"]
    , bgColor =      "#333333"
@@ -13,9 +13,14 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = " %UnsafeStdinReader% }{ %dynnetwork% | <fc=#f542d1>%nbupdates% pkg.</fc> | %disku% |\
-                \ <fc=#FFEE00>%cpu% %memory%</fc> |\
-                \ %default:Master% | %LFPG% | %date% "
+   , template = " %UnsafeStdinReader% }{\
+                \  %dynnetwork%  |\
+                \  <fc=#f542d1>%nbupdates% pkg.</fc>  |\
+                \  %disku%  |\
+                \  <fc=#FFEE00>%cpu%  %memory%</fc>  |\
+                \  %default:Master%  |\
+                \  %LFPG%  |\
+                \  %date%  "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -47,8 +52,8 @@ Config {
                              ] 36000
 
         -- network activity monitor (dynamic interface resolution)
-        , Run DynNetwork     [ "--template" , "<fc=#11FF73><fn=1>\xf0aa</fn> <tx>kB - \
-                                \<fn=1>\xf0ab</fn> <rx>kB (<dev>)</fc>"
+        , Run DynNetwork     [ "--template" , "<fc=#11FF73><fn=1>\xf0aa</fn> <tx>kB  -  \
+                                \<fn=1>\xf0ab</fn>  <rx>kB (<dev>)</fc>"
                              ] 10
 
         -- cpu activity monitor
@@ -70,7 +75,7 @@ Config {
 
         -- time and date indicator
         --   (%F = y-m-d date, %a = day of week, %T = h:m:s time)
-        , Run Date           "<fc=#ff6161><fn=1>\xf073</fn> %d/%m/%y (%a) %H:%M</fc>" "date" 10
+        , Run Date           "<fc=#ff6161><fn=1>\xf073</fn> %d/%m/%y (%a)  %H:%M</fc>" "date" 10
 
         , Run Volume "default" "Master" [ "--template", "<fc=#919aff><fn=1>\xf026</fn> <volume>%</fc>"
                                 ] 10
