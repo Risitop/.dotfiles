@@ -21,5 +21,9 @@ cp -rf ~/.dotfiles/.doom.d ~
 # XMonad
 cp -rf ~/.dotfiles/.xmonad ~
 cp -rf ~/.dotfiles/xmobar ~/.config
+if pgrep xmobar >/dev/null
+then
+    killall xmobar
+fi
 xmonad --recompile
 xmonad --restart

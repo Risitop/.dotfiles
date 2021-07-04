@@ -108,7 +108,7 @@ main = do
         , ppVisible = xmobarColor "#FFEE00" "" . wrap " " " "
         , ppHidden = xmobarColor "#DA8CE6" "" . wrap " " " "
         , ppHiddenNoWindows = xmobarColor "#999999" "" . wrap " " " "
-        , ppTitle = xmobarColor "#EC9607" "" . shorten 60
+        , ppTitle = xmobarColor "#EC9607" "" . shorten 30
         , ppSep =  "<fc=#bbbbbb> | </fc>"
         , ppUrgent = xmobarColor "#ff6161" "" . wrap "!" "!"
         , ppOrder  = \(ws:_:t:_) -> [ws,t]

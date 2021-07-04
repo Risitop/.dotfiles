@@ -13,7 +13,9 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = " %UnsafeStdinReader% }{ %disku% | <fc=#FFEE00>%cpu% %memory%</fc> | %dynnetwork% | %default:Master% | %LFPG% | %date% "
+   , template = " %UnsafeStdinReader% }{ <fc=#f542d1>%pcupdates% pkg.</fc> | %disku% |\
+                \ <fc=#FFEE00>%cpu% %memory%</fc> | %dynnetwork% |\
+                \ %default:Master% | %LFPG% | %date% "
 
    -- general behavior
    , lowerOnStart =     True    -- send to bottom of window stack on start
@@ -72,6 +74,10 @@ Config {
 
         , Run Volume "default" "Master" [ "--template", "<fc=#919aff><fn=1>\xf026</fn> <volume>%</fc>"
                                 ] 10
+
+        -- Number of packages to update
+        , Run Com "/home/risitop/.utils/pcupdates/pcupdates.sh" [] "pcupdates" 6000
+
         , Run UnsafeStdinReader
         ]
    }   
