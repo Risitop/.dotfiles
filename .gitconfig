@@ -1,0 +1,7 @@
+[user]
+	name = risitop
+	email = aziz.fouche@gmail.com
+[core]
+	editor = emacs
+[init]
+	defaultBranch = master
