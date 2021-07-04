@@ -7,7 +7,6 @@ fi
 
 while true
 do
-	echo "Updating"
 	checkupdates | wc -l > /home/risitop/.utils/pac-updates/nbupdates
-	sleep 10
+	sleep 1000
 done
