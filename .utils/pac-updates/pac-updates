@@ -1,0 +1,4 @@
+#!/bin/bash
+
+VALUE=$(cat /home/risitop/.utils/pac-updates/nbupdates)
+echo $VALUE

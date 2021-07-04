@@ -13,7 +13,7 @@ Config {
    -- layout
    , sepChar =  "%"   -- delineator between plugin names and straight text
    , alignSep = "}{"  -- separator between left-right alignment
-   , template = " %UnsafeStdinReader% }{ <fc=#f542d1>%pcupdates% pkg.</fc> | %disku% |\
+   , template = " %UnsafeStdinReader% }{ <fc=#f542d1>%nbupdates% pkg.</fc> | %disku% |\
                 \ <fc=#FFEE00>%cpu% %memory%</fc> | %dynnetwork% |\
                 \ %default:Master% | %LFPG% | %date% "
 
@@ -76,7 +76,7 @@ Config {
                                 ] 10
 
         -- Number of packages to update
-        , Run Com "/home/risitop/.utils/pcupdates/pcupdates.sh" [] "pcupdates" 6000
+        , Run Com "/home/risitop/.utils/pac-updates/pac-updates" [] "nbupdates" 1000
 
         , Run UnsafeStdinReader
         ]

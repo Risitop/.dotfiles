@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if pgrep pac-updates-server >/dev/null
+then
+	killall pac-updates-server
+fi
+
+while true
+do
+	echo "Updating"
+	checkupdates | wc -l > /home/risitop/.utils/pac-updates/nbupdates
+	sleep 10
+done

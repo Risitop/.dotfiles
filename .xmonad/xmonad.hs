@@ -86,12 +86,13 @@ myStartupHook = do
   spawnOnce "xrandr --output DP-2 --mode 2560x1440 --right-of DP-4"
   spawnOnce "nitrogen --restore &"
   spawnOnce "kilall picom; picom -f &"
+  spawnOnce "/home/risitop/.utils/pac-updates/pac-updates-server &"
 
 
 -- Main
 main = do
   xmproc0 <- spawnPipe ("xmobar -x 0 " ++ myXMobarPath)
-  xmproc1 <- spawnPipe ("sleep 1; xmobar -x 1 " ++ myXMobarPath) -- sleeping for smoother update
+  xmproc1 <- spawnPipe ("xmobar -x 1 " ++ myXMobarPath) -- sleeping for smoother update
   xmonad $ docks azertyConfig
     { terminal = myTerminal
     , modMask = myModMask
